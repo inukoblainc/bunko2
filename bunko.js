@@ -45,7 +45,7 @@
           totalscore = totalscore+1;
           
         }
-        if(diceone ===1 && round != 1){
+        if(diceone ===1 && round !== 1){
           ctx.drawImage(images[1], 50,50);
         
           
@@ -55,7 +55,7 @@
           counter = counter+1;
           totalscore = totalscore+1;	
         }
-        if( diceone === 2 && round != 2){
+        if( diceone === 2 && round !== 2){
           ctx.drawImage(images[2], 50,50);
           
           
@@ -65,7 +65,7 @@
           counter = counter+1;
           totalscore = totalscore+1;	
         }
-        if( diceone === 3 && round != 3){
+        if( diceone === 3 && round !== 3){
           ctx.drawImage(images[3], 50,50);
           
         }
@@ -74,7 +74,7 @@
           counter = counter+1;
           totalscore = totalscore+1;
         }
-        if( diceone === 4 && round != 4){
+        if( diceone === 4 && round !== 4){
           ctx.drawImage(images[4], 50,50);
           
         }
@@ -83,12 +83,12 @@
           counter = counter+1;
           totalscore = totalscore+1;
         }
-        if( diceone === 5 && round != 5){
+        if( diceone === 5 && round !== 5){
           ctx.drawImage(images[5], 50,50);
           
         }
         
-        if( diceone === 6 && round != 6){
+        if( diceone === 6 && round !== 6){
           ctx.drawImage(images[6], 50,50);
           
         }
@@ -103,7 +103,7 @@
           counter = counter+1;
           totalscore = totalscore+1;
         }
-        if(dicetwo ===1 && round != 1){
+        if(dicetwo ===1 && round !== 1){
           ctx.drawImage(images[1], 250,50);
         }
         if( dicetwo === 2 && round === 2){
@@ -111,7 +111,7 @@
           counter = counter+1;
           totalscore = totalscore+1;	
         }
-        if( dicetwo === 2 && round != 2){
+        if( dicetwo === 2 && round !== 2){
           ctx.drawImage(images[2], 250,50);
         }
         if( dicetwo === 3 && round === 3){
@@ -119,7 +119,7 @@
           counter = counter+1;
           totalscore = totalscore+1;	
         }
-        if( dicetwo === 3 && round != 3){
+        if( dicetwo === 3 && round !== 3){
           ctx.drawImage(images[3], 250,50);
         }
         if( dicetwo === 4 && round === 4){
@@ -127,7 +127,7 @@
           counter = counter+1;
           totalscore = totalscore+1;
         }
-        if( dicetwo === 4 && round != 4){
+        if( dicetwo === 4 && round !== 4){
           ctx.drawImage(images[4], 250,50);
         }
         if( dicetwo === 5 && round === 5){
@@ -135,11 +135,11 @@
           counter = counter+1;
           totalscore = totalscore+1;
         }
-        if( dicetwo === 5 && round != 5){
+        if( dicetwo === 5 && round !== 5){
           ctx.drawImage(images[5], 250,50);
         }
         
-        if( dicetwo === 6 && round != 6){
+        if( dicetwo === 6 && round !== 6){
           ctx.drawImage(images[6], 250,50);
         }
         if( dicetwo === 6 && round === 6){
@@ -153,7 +153,7 @@
           counter = counter+1;
           totalscore = totalscore+1;
         }
-        if(dicethree ===1 && round != 1){
+        if(dicethree ===1 && round !== 1){
           ctx.drawImage(images[1], 450,50);
         }
         if( dicethree === 2 && round === 2){
@@ -161,7 +161,7 @@
           counter = counter+1;
           totalscore = totalscore+1;	
         }
-        if( dicethree === 2 && round != 2){
+        if( dicethree === 2 && round !== 2){
           ctx.drawImage(images[2], 450,50);
         }
         if( dicethree === 3 && round === 3){
@@ -169,7 +169,7 @@
           counter = counter+1;
           totalscore = totalscore+1;	
         }
-        if( dicethree === 3 && round != 3){
+        if( dicethree === 3 && round !== 3){
           ctx.drawImage(images[3], 450,50);
         }
         if( dicethree === 4 && round === 4){
@@ -177,7 +177,7 @@
           counter = counter+1;
           totalscore = totalscore+1;
         }
-        if( dicethree === 4 && round != 4){
+        if( dicethree === 4 && round !== 4){
           ctx.drawImage(images[4], 450,50);
         }
         if( dicethree === 5 && round === 5){
@@ -185,11 +185,11 @@
           counter = counter+1;
           totalscore = totalscore+1;
         }
-        if( dicethree === 5 && round != 5){
+        if( dicethree === 5 && round !== 5){
           ctx.drawImage(images[5], 450,50);
         }
         
-        if( dicethree === 6 && round != 6){
+        if( dicethree === 6 && round !== 6){
           ctx.drawImage(images[6], 450,50);
         }
         if( dicethree === 6 && round === 6){
@@ -206,7 +206,7 @@
         }
       
         
-        if ( diceone != round && dicetwo != round && dicethree != round && round != "End"){
+        if ( diceone !== round && dicetwo !== round && dicethree !== round && round !== "End"){
           player = player +1;
           if(player === 4){
             player = 1
@@ -227,7 +227,7 @@
       var key = e.which 
 
       
-      if (key == 32 && round !="End") {
+      if (key === 32 && round !=="End") {
         ctxMove();
       }
 
