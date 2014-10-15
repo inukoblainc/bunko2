@@ -1,6 +1,7 @@
 (function() {
   var canvas = document.getElementById("bunko");
   var ctx = canvas.getContext("2d");
+
   var diceImg = [null]; // no image for 0
   for (var i = 1; i <= 6; i += 1) {
     var img = new Image();
