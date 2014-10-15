@@ -22,7 +22,7 @@
   var round = 1;
   var player = 1;
 
-  function ctxMove(){
+  function takeOneTurn() {
     ctx.clearRect(0,0,900,900);
     ctx.font="24px Georgia";
     dice[0] = Math.floor((Math.random() * 6) + 1);
@@ -228,7 +228,7 @@
     var key = e.which;
 
     if (key === 32 && round !== "End") {
-      ctxMove();
+      takeOneTurn();
     }
   };
 })();
