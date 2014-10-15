@@ -16,7 +16,10 @@
   threeofakind.src = "img/threeofakind.png";
 
   var dice = new Array(3);
-
+  var playerscore = new Array(3);
+  for (var i = 0; i <= 2; i += 1) {
+    playerscore[i] = 0;
+	}
   var counter = 0;
   var totalscore = 0;
   var round = 1;
@@ -54,10 +57,14 @@
       ctx.drawImage(bunko,0,0);
       counter = counter+21;
       totalscore = totalscore+21;
+	  playerscore[player-1]= playerscore[player-1]+21;
+	  
     } else if (gotThreeOfAKind) {
       ctx.drawImage(threeofakind,0,0);
       counter = counter+5;
       totalscore = totalscore+5;
+	  playerscore[player-1]= playerscore[player-1]+5;
+	  
     } else {
       var anyDiceEqualRound = false;
       for (i = 0; i < dice.length; i += 1) {
@@ -65,11 +72,12 @@
         if (dice[i] === round) {
           counter += 1;
           totalscore += 1;
+		  playerscore[player-1]= playerscore[player-1]+1;
           anyDiceEqualRound = true;
         }
       }
 
-      if (counter > 21) {
+      if (counter > 20) {
         round += 1;
         counter = 0;
       }
@@ -91,6 +99,10 @@
     ctx.fillText("Total score:  " + totalscore,150,450);
     ctx.fillText("Round:  " + round,10,25);
     ctx.fillText("Player: " +player +"'s turn." , 150, 510);
+	ctx.font = "20px Georgia";
+	ctx.fillText("Player One's score: " + playerscore[0],0,570);
+	ctx.fillText("Player Two's score: " + playerscore[1],220,570);
+	ctx.fillText("Player Three's score: " + playerscore[2],440,570);
   }
 
   window.onkeypress = function(e) {
