@@ -16,26 +16,26 @@
   var totalscore = 0;
   var round = 1;
   function draw(){
-  var canvas = document.getElementById("bunko");
-  var ctx = canvas.getContext("2d");
-  var player = 1;
+    var canvas = document.getElementById("bunko");
+    var ctx = canvas.getContext("2d");
+    var player = 1;
 
 
-  function ctxMove(){
-    ctx.clearRect(0,0,900,900);
-    ctx.font="24px Georgia";
-    diceone = Math.floor((Math.random() * 6) + 1);
-    dicetwo = Math.floor((Math.random() * 6) + 1);
-    dicethree = Math.floor((Math.random() * 6) + 1);
-    if(diceone === round &&dicetwo === round && dicethree === round){
-      ctx.drawImage(bunko,0,0);
-      counter = counter+21;
-      totalscore = totalscore+21;
+    function ctxMove(){
+      ctx.clearRect(0,0,900,900);
+      ctx.font="24px Georgia";
+      diceone = Math.floor((Math.random() * 6) + 1);
+      dicetwo = Math.floor((Math.random() * 6) + 1);
+      dicethree = Math.floor((Math.random() * 6) + 1);
+      if(diceone === round &&dicetwo === round && dicethree === round){
+        ctx.drawImage(bunko,0,0);
+        counter = counter+21;
+        totalscore = totalscore+21;
       }
-    else if ( diceone ===dicetwo && dicetwo === dicethree){
-      ctx.drawImage(threeofakind,0,0);
-      counter = counter+5;
-      totalscore = totalscore+5;
+      else if ( diceone ===dicetwo && dicetwo === dicethree){
+        ctx.drawImage(threeofakind,0,0);
+        counter = counter+5;
+        totalscore = totalscore+5;
       }
 
       else{
@@ -202,7 +202,7 @@
           counter = 0
         }
         if (round === 7){
-        round = "End";
+          round = "End";
         }
 
 
@@ -216,22 +216,22 @@
         }
       }
 
-    ctx.fillText("Round score:  " + counter ,150,390);
-    ctx.fillText("Total score:  " + totalscore,150,450);
-    ctx.fillText("Round:  " + round,10,25);
-    ctx.fillText("Player: " +player +"'s turn." , 150, 510);
-  }
+      ctx.fillText("Round score:  " + counter ,150,390);
+      ctx.fillText("Total score:  " + totalscore,150,450);
+      ctx.fillText("Round:  " + round,10,25);
+      ctx.fillText("Player: " +player +"'s turn." , 150, 510);
+    }
 
 
-  window.onkeypress = function(e) {
+    window.onkeypress = function(e) {
       var key = e.which
 
 
-      if (key === 32 && round !=="End") {
-        ctxMove();
-      }
+        if (key === 32 && round !=="End") {
+          ctxMove();
+        }
 
-  }
+    }
 
 
   }
