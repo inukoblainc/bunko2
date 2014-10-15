@@ -20,7 +20,7 @@
   var counter = 0;
   var totalscore = 0;
   var round = 1;
-  function draw(){
+  function start(){
     var player = 1;
 
 
@@ -239,5 +239,5 @@
 
   }
 
-  draw();
+  start();
 })();
